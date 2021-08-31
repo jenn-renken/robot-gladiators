@@ -17,6 +17,8 @@ var enemyAttack = 12;
 
 // this creates a function named "fight"
 var fight = function(enemyName) {
+    // repeat and execute as lon gas the enemy-robot is still alive
+    while(enemyHealth > 0) {
     // Alert players that they are starting the round
     window.alert("Welcome to Robot Gladiators!");
 
@@ -65,8 +67,12 @@ var fight = function(enemyName) {
       fight();
     }
   }
+}
 };
 
 for(var i = 0; i <enemyNames.length; i++) {
-    fight(enemyNames[i]);
+    var pickedEnemyName = enemyNames[i];
+    enemyHealth = 50;
+    //call fight function with enemy0-robot
+    fight(pickedEnemyName);
 }
